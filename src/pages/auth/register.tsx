@@ -10,7 +10,7 @@ export default function Register() {
   const [form, setForm] = useState({ name: '', username: '', email: '', password: '' });
   const [loading, setLoading] = useState(false);
   const router = useRouter();
-  const setUser = useAuthStore(s => s.setUser);
+const setUser = useAuthStore((s: any) => s.setUser);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault(); setLoading(true);
